@@ -84,7 +84,7 @@ $env:GOOGLE_API_KEY="your-google-ai-studio-api-key"
 기본값은 Vertex AI 분당 12회, Google AI Studio 분당 4회로 제한하며, 429
 `ResourceExhausted`가 발생하면 같은 LLM 요청을 backoff 후 재시도합니다. quota가 더
 높으면 `.env`에서 값을 조정할 수 있습니다.
-## 현재 quota 값을 조절할 경우 긴 영상에서는 중간에 실패하는 문제가 지속적으로 발생하고 있습니다.
+**현재 quota 값을 조절할 경우 긴 영상에서는 중간에 실패하는 문제가 지속적으로 발생하고 있습니다.**
 ```bash
 DUBBING_AGENT_LLM_REQUESTS_PER_MINUTE=12
 DUBBING_AGENT_LLM_RESOURCE_EXHAUSTED_RETRIES=8
