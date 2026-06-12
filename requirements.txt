@@ -1,0 +1,3 @@
+# Runtime install target for tools that expect a requirements file.
+# The canonical dependency list lives in pyproject.toml.
+-e .

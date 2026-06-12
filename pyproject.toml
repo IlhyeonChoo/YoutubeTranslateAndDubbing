@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "youtube-dubbing-agent"
+version = "0.1.0"
+description = "LangChain/LangGraph 기반 YouTube 번역 및 더빙 워크플로우."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.1.0",
+    "edge-tts>=6.1.0",
+    "hangul-romanize>=0.1.0",
+    "langchain>=1.0.0",
+    "langchain-core>=1.0.0",
+    "langchain-google-genai>=4.0.0",
+    "langchain-google-vertexai>=3.0.0",
+    "langgraph>=1.0.0",
+    "moviepy>=2.0.0",
+    "openai-whisper>=20231117",
+    "pydantic>=2.7.0",
+    "pydub>=0.25.1",
+    "pykakasi>=2.2.1",
+    "python-dotenv>=1.0.0",
+    "torch==2.8.0",
+    "transliterate>=1.10.2",
+    "yt-dlp>=2024.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+dubbing-agent = "dubbing_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["dubbing_agent*"]
